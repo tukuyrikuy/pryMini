@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>tabla persona</title>
+</head>
+
+<body>
+    <h1>EDITANDO DATOS</h1>
+    <form name="frmEdt" action="DOedt" method="POST">
+        codigo de persona: <input type="text" name='txtCodigo' value="<%=dato[0].codPersona%>" disabled><br>
+        <input type="hidden" name="txtCod" value="<%=dato[0].codPersona%>">
+        Nombres de la persona: <input type="text" name='txtNombres' value="<%=dato[0].nombres%>"><br>
+        Apellidos de persona: <input type="text" name='txtApellidos' value="<%=dato[0].apellidos%>"><br>
+        <input type="submit" value="enviar">
+    </form>
+
+</body>
+
+</html>

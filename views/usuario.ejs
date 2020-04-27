@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>USUARIO</title>
+
+</head>
+
+<body>
+    <h1>pagina de usuario</h1>
+    <button id="b1">Mostrar Nombres</button>
+
+    <div id="contenido">
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#b1").click(function () {
+                $.ajax({
+                    url: "/",
+                    success: (result) => {
+                        $("#contenido").html(result);
+                    }
+                });
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

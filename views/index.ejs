@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>tabla persona</title>
+  </head>
+  <body>
+    <h1>Listado de la tabla persona</h1>
+    <p>
+  insertar <a href="/nuevo"> nuevo</a> registro en persona
+</p><br>
+<table border ='1'>
+<tr>
+  <th>CODIGO</th>
+  <th>NOMBRES</th>
+  <th>APELLIDOS</th>
+  <th>EDITAR</th>
+  <th>BORRAR</th>
+</tr>
+
+
+    <% for (var i = 0 ; i < datos.length;i++){ %>
+      <tr>
+        <td><%=datos[i].codPersona%></td>
+        <td><%=datos[i].nombres%></td>
+        <td><%=datos[i].apellidos%></td>
+        <td><a href="edita/<%=datos[i].codPersona%>">editar</a></td>
+        <td><a href="borra/<%=datos[i].codPersona%>">borrar</a></td>
+      </tr>
+      <% } %>
+
+    </table>
+
+
+    
+  </body>
+</html>
